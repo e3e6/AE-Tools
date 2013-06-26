@@ -1,0 +1,53 @@
+
+.toolbarContainer {
+    background: none repeat scroll 0 0 #FFCC99;
+    border-bottom: 1px solid threedshadow;
+    color: #000000;
+    font-family: arial,helvetica,sans-serif;
+    margin: 0;
+    padding: 2px 4px 2px 5px;
+}
+
+
+.toolbar {
+    font-size: 80%;
+    margin: 0;
+    padding: 2px 0;
+}
+
+
+.toolbar ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.toolbar li {
+    display: inline;
+    list-style: none outside none;
+    text-align: center;
+    padding: 2px;
+}
+
+.toolbar li a:link {
+    border: 1px solid #ECE9D8;
+}
+.toolbar li a {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    margin: 2px 0;
+    padding: 3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.toolbar li a:hover {
+    border: 1px outset #FFFFFF;
+}
+.toolbar li a:link {
+    border: 1px solid #ECE9D8;
+}
+
+.toolbar li a:active {
+    border: 1px inset #FFFFFF;
+}
