@@ -5,7 +5,7 @@
 // @version     1
 // ==/UserScript==
 
-var isProductionMode = false;
+var isProductionMode = true;
 /**
  * Dev. paths
  */
