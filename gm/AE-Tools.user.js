@@ -16,7 +16,7 @@ var scriptsDev = [//"http://code.jquery.com/jquery-1.10.1.min.js",
  * Production paths
  */
 var scriptsProd = [//"http://code.jquery.com/jquery-1.9.1.js",
-               "https://raw.github.com/e3e6/AE-Tools/master/aeTools.js",
+               "https://raw.github.com/e3e6/AE-Tools/master/js/aeTools.js",
               ];
 
 /**
