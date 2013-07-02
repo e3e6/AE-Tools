@@ -2,7 +2,7 @@
 // @name        AE-Tools
 // @namespace   e3e6.entellitrak
 // @include     *.entellitrak.com*
-// @version     1
+// @version     5
 // ==/UserScript==
 
 var isProductionMode = true;
