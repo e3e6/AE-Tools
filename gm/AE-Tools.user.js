@@ -17,9 +17,9 @@ var styleDev = ["http://localhost:801/external/aeTools.css"];
  * Production paths
  */
 var scriptsProd = [//"http://code.jquery.com/jquery-1.9.1.js",
-               "https://raw.github.com/e3e6/AE-Tools/master/js/aeTools.js",
+               "https://rawgithub.com/e3e6/AE-Tools/master/js/aeTools.js",
               ];
-var styleProd = ["https://raw.github.com/e3e6/AE-Tools/master/css/aeTools.css"];
+var styleProd = ["https://rawgithub.com/e3e6/AE-Tools/master/css/aeTools.css"];
 /**
  * Inser script element to page
  */ 
