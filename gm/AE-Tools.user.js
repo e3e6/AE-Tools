@@ -12,13 +12,14 @@ var isProductionMode = true;
 var scriptsDev = [//"http://code.jquery.com/jquery-1.10.1.min.js",
                     "http://localhost:801/external/aeTools.js"];
 
+var styleDev = ["http://localhost:801/external/aeTools.css"];
 /**
  * Production paths
  */
 var scriptsProd = [//"http://code.jquery.com/jquery-1.9.1.js",
                "https://raw.github.com/e3e6/AE-Tools/master/js/aeTools.js",
               ];
-
+var styleProd = ["https://raw.github.com/e3e6/AE-Tools/master/css/aeTools.css"];
 /**
  * Inser script element to page
  */ 
@@ -64,9 +65,13 @@ function debug(text){
 /**
  * Entry
  */
+/**
+ * Entry
+ */
 if(isProductionMode){
   insertScriptSrc(scriptsProd);
+  insertCssSrc(styleProd);
 }else{
   insertScriptSrc(scriptsDev);
-} 
-
+  insertCssSrc(styleDev);
+}
