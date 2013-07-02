@@ -42,15 +42,15 @@ function listen(evnt, elem, func) {
       var toolbar = document.createElement("ul");
           //toolbar.setAttribute('class', 'separator');
       toolbar.innerHTML = "<li><label onclick='window.open(\"https://ae-yoda.atlassian.net/wiki/display/DH/AE+Tools\",\"_blank\")' style='font-weight: bold;'>AE Tools:</label>"
-      + "<li><img class='seperator' border='0' src='web-pub/component/grid/images/seperator.jpg'></li>"
+      + "<li>|</li>"
 
       + "<li><a href='home.do'>Home</a>"
-       + "<li><img class='seperator' border='0' src='web-pub/component/grid/images/seperator.jpg'></li>"
+       + "<li>|</li>"
 
       + "<li><a href='page.request.do?page=page.utilities.web.logviewer'>Log Viewer</a>"
        + "<li><a href='entellisql.create.request.do'>SQL</a>"
         + "<li><a href='page.request.do?page=page.codeSearch'>Code Search</a>"
-                        + "<li><img class='seperator' border='0' src='web-pub/component/grid/images/seperator.jpg'></li>";
+                        + "<li>|</li>";
       
       var toolDiv = document.createElement("div");
           toolDiv.setAttribute('class', 'toolbar');
