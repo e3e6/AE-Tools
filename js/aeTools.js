@@ -60,8 +60,10 @@ function listen(evnt, elem, func) {
           toolDivCont.setAttribute('class', 'toolbarContainer');
           toolDivCont.appendChild(toolDiv);
           
-      window.document.getElementsByTagName('body')[0]
-        .insertBefore(toolDivCont, document.body.childNodes[0])
+      if(window.document.getElementsByTagName('body').length > 0){
+          window.document.getElementsByTagName('body')[0]
+            .insertBefore(toolDivCont, document.body.childNodes[0])
+      }
     }
     
     
