@@ -53,11 +53,11 @@ function listen(evnt, elem, func) {
                         + "<li>|</li>";
       
       var toolDiv = document.createElement("div");
-          toolDiv.setAttribute('style', 'display:none;');
           toolDiv.setAttribute('class', 'toolbar');
           toolDiv.appendChild(toolbar);
           
       var toolDivCont = document.createElement("div");
+          toolDivCont.setAttribute('style', 'display:none;');
           toolDivCont.setAttribute('class', 'toolbarContainer');
           toolDivCont.appendChild(toolDiv);
           
