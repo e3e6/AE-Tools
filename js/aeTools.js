@@ -40,7 +40,7 @@ function listen(evnt, elem, func) {
     function createUI(){
       debug('AE-Tools | initiated');
       var toolbar = document.createElement("ul");
-          //toolbar.setAttribute('class', 'separator');
+          toolbar.setAttribute('style', 'display:none;');
       toolbar.innerHTML = "<li><label onclick='window.open(\"https://ae-yoda.atlassian.net/wiki/display/DH/AE+Tools\",\"_blank\")' style='font-weight: bold;'>AE Tools:</label>"
       + "<li>|</li>"
 
