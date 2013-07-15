@@ -50,6 +50,7 @@ function listen(evnt, elem, func) {
       + "<li><a href='page.request.do?page=page.utilities.web.logviewer'>Log Viewer</a>"
        + "<li><a href='entellisql.create.request.do'>SQL</a>"
         + "<li><a href='page.request.do?page=page.codeSearch'>Code Search</a>"
+        + "<li><a href='page.shared.do'>Pages</a>"
                         + "<li>|</li>";
       
       var toolDiv = document.createElement("div");
