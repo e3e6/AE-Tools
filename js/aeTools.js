@@ -68,9 +68,12 @@ function listen(evnt, elem, func) {
             .insertBefore(toolDivCont, document.body.childNodes[0])
       }
       
-      document.getElementById("re-open-link").click = function(){
+      listen('click', document.getElementById("re-open-link"), function(){
           window.location.href = window.location.href.replace('tracking.update.request', 'workflow');
-      };
+      });
+ //     document.getElementById("re-open-link").click = function(){
+ //         window.location.href = window.location.href.replace('tracking.update.request', 'workflow');
+ //     };
     }
     
     
