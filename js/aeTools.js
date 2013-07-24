@@ -44,14 +44,15 @@ function listen(evnt, elem, func) {
       toolbar.innerHTML = "<li><label onclick='window.open(\"https://ae-yoda.atlassian.net/wiki/display/DH/AE+Tools\",\"_blank\")' style='font-weight: bold;'>AE Tools:</label>"
       + "<li>|</li>"
 
-      + "<li><a href='home.do'>Home</a>"
+      + "<li><a href='home.do'>Home</a></li>"
        + "<li>|</li>"
 
-      + "<li><a href='page.request.do?page=page.utilities.web.logviewer'>Log Viewer</a>"
-       + "<li><a href='entellisql.create.request.do'>SQL</a>"
-        + "<li><a href='page.request.do?page=page.codeSearch'>Code Search</a>"
-        + "<li><a href='page.shared.do'>Pages</a>"
-                        + "<li>|</li>";
+      + "<li><a href='page.request.do?page=page.utilities.web.logviewer'>Log Viewer</a></li>"
+       + "<li><a href='entellisql.create.request.do'>SQL</a></li>"
+        + "<li><a href='page.request.do?page=page.codeSearch'>Code Search</a></li>"
+        + "<li><a href='page.shared.do'>Pages</a></li>"
+                        + "<li>|</li>"
+         + "<li><a href='#' id='re-open-link'>Re-open</a></li>"
       
       var toolDiv = document.createElement("div");
           toolDiv.setAttribute('class', 'toolbar');
@@ -66,6 +67,10 @@ function listen(evnt, elem, func) {
           window.document.getElementsByTagName('body')[0]
             .insertBefore(toolDivCont, document.body.childNodes[0])
       }
+      
+      document.getElementById("re-open-link").click = function(){
+          window.location.href = window.location.href.replace('tracking.update.request', 'workflow');
+      };
     }
     
     
