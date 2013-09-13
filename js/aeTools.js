@@ -93,7 +93,7 @@ function showToolbar(){
       document.getElementById("re-open-link").click = function(){
           window.location.href = window.location.href.replace('tracking.update.request', 'workflow');
       };
-    }
+
       listen('click', document.getElementById("re-open-link"), function(){
           window.location.href = window.location.href.replace('tracking.update.request', 'workflow');
       });
