@@ -1,4 +1,3 @@
-
 function initAeTools(){
     debug('AE-Tools | initiated');
     
@@ -32,6 +31,10 @@ function listen(evnt, elem, func) {
     }
 }
 
+function showToolbar(){
+    document.getElementById("toolbarContainerId").setAttribute('style', "display:block");
+    document.getElementById("toolbarAnchor").setAttribute('style', "display:none");
+}
 /**
  * Entry
  */
@@ -41,30 +44,52 @@ function listen(evnt, elem, func) {
     function createUI(){
       debug('AE-Tools | initiated');
       var toolbar = document.createElement("ul");
-          //toolbar.setAttribute('class', 'separator');
+          
       toolbar.innerHTML = "<li><label onclick='window.open(\"https://ae-yoda.atlassian.net/wiki/display/DH/AE+Tools\",\"_blank\")' style='font-weight: bold;'>AE Tools:</label>"
-      + "<li><img class='seperator' border='0' src='web-pub/component/grid/images/seperator.jpg'></li>"
+      + "<li>|</li>"
 
-      + "<li><a href='home.do'>Home</a>"
-       + "<li><img class='seperator' border='0' src='web-pub/component/grid/images/seperator.jpg'></li>"
+      + "<li><a href='home.do'>Home</a></li>"
+       + "<li>|</li>"
 
-      + "<li><a href='page.request.do?page=page.utilities.web.logviewer'>Log Viewer</a>"
-       + "<li><a href='entellisql.create.request.do'>SQL</a>"
-        + "<li><a href='page.request.do?page=page.codeSearch'>Code Search</a>"
-                        + "<li><img class='seperator' border='0' src='web-pub/component/grid/images/seperator.jpg'></li>";
+      + "<li><a href='page.request.do?page=page.utilities.web.logviewer'>Log Viewer</a></li>"
+       + "<li><a href='entellisql.create.request.do'>SQL</a></li>"
+        + "<li><a href='page.request.do?page=page.codeSearch'>Code Search</a></li>"
+        + "<li><a href='page.shared.do'>Pages</a></li>"
+                        + "<li>|</li>"
+         + "<li><a href='#' id='re-open-link'>Re-open</a></li>"
       
       var toolDiv = document.createElement("div");
           toolDiv.setAttribute('class', 'toolbar');
           toolDiv.appendChild(toolbar);
           
       var toolDivCont = document.createElement("div");
+          toolDivCont.setAttribute('id', 'toolbarContainerId');
+          toolDivCont.setAttribute('style', 'display:none;');
           toolDivCont.setAttribute('class', 'toolbarContainer');
           toolDivCont.appendChild(toolDiv);
           
-      document.body.insertBefore(toolDivCont, document.body.childNodes[0])
+          
+       var aeToolsAnchor = document.createElement("input");
+           aeToolsAnchor.setAttribute('id', 'toolbarAnchor');
+           aeToolsAnchor.setAttribute('type', 'button');
+           aeToolsAnchor.setAttribute('onmouseover', 'showToolbar()');
+           aeToolsAnchor.setAttribute('value', 'AE Tools');
+   
+      if(window.document.getElementsByTagName('body').length > 0){
+          window.document.getElementsByTagName('body')[0]
+            .insertBefore(toolDivCont, document.body.childNodes[0]);
+            
+            window.document.getElementsByTagName('body')[0].insertBefore(aeToolsAnchor, document.body.childNodes[0]);
+      }
+      
+      listen('click', document.getElementById("re-open-link"), function(){
+          window.location.href = window.location.href.replace('tracking.update.request', 'workflow');
+      });
+      document.getElementById("re-open-link").click = function(){
+          window.location.href = window.location.href.replace('tracking.update.request', 'workflow');
+      };
     }
-    
-    
+
     createUI();
     
 })(window);

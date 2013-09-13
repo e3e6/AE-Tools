@@ -1,11 +1,11 @@
-
 .toolbarContainer {
     background: none repeat scroll 0 0 #FFCC99;
     border-bottom: 1px solid threedshadow;
     color: #000000;
     font-family: arial,helvetica,sans-serif;
     margin: 0;
-    padding: 2px 4px 2px 5px;
+    padding: 2px 4px 3px 5px;
+    /*display: block !important;*/
 }
 
 
@@ -50,4 +50,23 @@
 
 .toolbar li a:active {
     border: 1px inset #FFFFFF;
+}
+
+#toolbarAnchor{
+             z-index: 40000;
+    background: none repeat scroll 0 0 #FFCC99;
+    color: #000000;
+    position: absolute;
+    left: 2em;
+
+    font-family: arial,helvetica,sans-serif;
+    margin: 0;
+    padding: 1px 4px 2px 5px;
+    border-top: none;
+       border-bottom: 1px solid threedshadow;
+          border-left: 1px solid threedshadow;
+             border-right: 1px solid threedshadow;
+             
+             cursor: pointer;
+
 }
