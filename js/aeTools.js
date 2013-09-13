@@ -65,6 +65,7 @@ function showToolbar(){
       var toolDivCont = document.createElement("div");
           toolDivCont.setAttribute('id', 'toolbarContainerId');
           toolDivCont.setAttribute('style', 'display:none;');
+          toolDivCont.setAttribute('style', 'display:none;');
           toolDivCont.setAttribute('class', 'toolbarContainer');
           toolDivCont.appendChild(toolDiv);
           
@@ -81,6 +82,10 @@ function showToolbar(){
             
             window.document.getElementsByTagName('body')[0].insertBefore(aeToolsAnchor, document.body.childNodes[0]);
       }
+      if(window.document.getElementsByTagName('body').length > 0){
+          window.document.getElementsByTagName('body')[0]
+            .insertBefore(toolDivCont, document.body.childNodes[0])
+      }
       
       listen('click', document.getElementById("re-open-link"), function(){
           window.location.href = window.location.href.replace('tracking.update.request', 'workflow');
@@ -89,7 +94,15 @@ function showToolbar(){
           window.location.href = window.location.href.replace('tracking.update.request', 'workflow');
       };
     }
+      listen('click', document.getElementById("re-open-link"), function(){
+          window.location.href = window.location.href.replace('tracking.update.request', 'workflow');
+      });
+ //     document.getElementById("re-open-link").click = function(){
+ //         window.location.href = window.location.href.replace('tracking.update.request', 'workflow');
+ //     };
+    }
 
+    
     createUI();
     
 })(window);
